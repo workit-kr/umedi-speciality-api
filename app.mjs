@@ -11,7 +11,8 @@ const pool = new Pool({
 await pool.connect();
 
 export const handler = async (event) => {
-  const resp = fetchSpecialities()
+  var resp = {};
+  resp = fetchSpecialities()
   return resp
 }
 
