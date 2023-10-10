@@ -34,6 +34,11 @@ async function fetchSpecialities() {
 function buildResponse(statusCode, respBody) {
   return {
     statusCode: statusCode,
+    headers: {
+        "Access-Control-Allow-Headers" : 'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token',
+        "Access-Control-Allow-Origin": '*',
+        "Access-Control-Allow-Methods": 'GET'
+    },
     body: JSON.stringify(respBody)
   }
 }
